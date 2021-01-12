@@ -5,9 +5,12 @@ FROM employees
 WHERE first_name IN ('Irena', 'VIdya', 'Maya');
 
 # Refactored using Or instead of IN
-SELECT first_name, last_name
+SELECT first_name, last_name, gender
 FROM employees
-WHERE first_name = 'Irena' OR first_name = 'Maya' OR first_name = 'Vidya';
+WHERE gender = 'M'
+  AND (first_name LIKE 'Irena'
+   OR first_name LIKE 'Maya'
+   OR first_name LIKE 'Vidya');
 
 
 
