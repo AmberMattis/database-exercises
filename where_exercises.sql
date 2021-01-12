@@ -29,3 +29,14 @@ WHERE hire_date LIKE '%12-25';
 SELECT first_name, last_name
 FROM employees
 WHERE last_name LIKE '%q%';
+
+SELECT first_name, last_name
+FROM employees
+WHERE last_name LIKE '%E'
+    OR last_name LIKE 'E%';
+
+# Refactored to find all employees with last names that start and end with E
+SELECT first_name, last_name
+FROM employees
+WHERE last_name LIKE '%E'
+   AND last_name LIKE 'E%';
