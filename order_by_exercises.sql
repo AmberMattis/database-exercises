@@ -18,6 +18,13 @@ FROM employees
 WHERE first_name IN ('Irena', 'Vidya', 'Maya')
 ORDER BY last_name, first_name;
 
+# 5. refactored to order all employees with 'e' in their last name by emplyee number
+SELECT first_name, last_name
+FROM employees
+WHERE last_name LIKE'E%'
+ORDER BY emp_no;
+
+
 
 
 # Refactored using Or instead of IN
