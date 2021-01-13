@@ -1,5 +1,11 @@
 USE employees;
 
+# 2. refactor to order by first name  first "IRENE REUTENAUER" last "VIDYA SIMMEN"
+SELECT first_name, last_name
+FROM employees
+WHERE first_name IN ('Irena','Vidya','Maya')
+ORDER BY first_name;
+
 # 3. refactored to order by first name first
 SELECT first_name, last_name
 FROM employees
