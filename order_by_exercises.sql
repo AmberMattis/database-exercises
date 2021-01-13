@@ -1,10 +1,18 @@
 USE employees;
 
-# find all employees with these first names
+# 3. refactored to order by first name first
 SELECT first_name, last_name
 FROM employees
 WHERE first_name IN ('Irena', 'Vidya', 'Maya')
-ORDER BY first_name ASC, last_name ASC;
+ORDER BY first_name, last_name;
+
+# 4. refactored to order by last name first
+SELECT first_name, last_name
+FROM employees
+WHERE first_name IN ('Irena', 'Vidya', 'Maya')
+ORDER BY last_name, first_name;
+
+
 
 # Refactored using Or instead of IN
 SELECT first_name, last_name, gender
