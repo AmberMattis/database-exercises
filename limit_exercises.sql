@@ -14,3 +14,11 @@ WHERE  hire_date BETWEEN '1990-01-01' AND '1999-12-31'
 ORDER BY  birth_date, hire_date DESC
 LIMIT 5;
 
+# 4. Refactored above code to display the list of the five employees on page 10 using offset
+SELECT first_name, last_name, hire_date, birth_date
+FROM employees
+WHERE  hire_date BETWEEN '1990-01-01' AND '1999-12-31'
+  AND birth_date LIKE '%12-25'
+ORDER BY  birth_date, hire_date DESC
+LIMIT 5 OFFSET 45;
+
