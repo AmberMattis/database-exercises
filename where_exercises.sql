@@ -49,8 +49,9 @@ WHERE last_name LIKE '%E'
 # Find all employees born Christmas and hired in the 90s
 SELECT first_name, last_name, hire_date
 FROM employees
-WHERE  hire_date LIKE '199%'
-AND hire_date LIKE '%12-25';
+WHERE  hire_date BETWEEN '1990-01-01' AND '1999-12-31'
+  AND birth_date LIKE '%12-25'
+ORDER BY hire_date DESC;
 
 # Find all employees with 'q' but not 'qu' in last name
 SELECT first_name, last_name
