@@ -2,7 +2,7 @@ USE employees;
 
 SELECT first_name, last_name
 FROM employees
-WHERE first_name IN ('Irena', 'VIdya', 'Maya');
+WHERE first_name IN ('Irena', 'Vidya', 'Maya');
 
 # Refactored using Or instead of IN
 SELECT first_name, last_name, gender
@@ -40,3 +40,9 @@ SELECT first_name, last_name
 FROM employees
 WHERE last_name LIKE '%E'
    AND last_name LIKE 'E%';
+
+# Find all employees born Christmas and hired in the 90s
+SELECT first_name, last_name, hire_date
+FROM employees
+WHERE  hire_date LIKE '199%'
+AND hire_date LIKE '%12-25'
