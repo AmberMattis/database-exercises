@@ -30,7 +30,7 @@ FROM employees
 WHERE last_name LIKE'%E%'
 ORDER BY emp_no DESC, last_name DESC;
 
-# 7. refactored Christmas hires born in the 90s so first result is Khun Bernini oldest employee
+# 7. refactored 90s hires born on Christmas so first result is Khun Bernini oldest employee
 SELECT first_name, last_name, hire_date
 FROM employees
 WHERE  hire_date BETWEEN '1990-01-01' AND '1999-12-31'
