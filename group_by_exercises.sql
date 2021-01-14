@@ -28,8 +28,10 @@ WHERE last_name LIKE '%q%'
 GROUP BY last_name;
 
 # 7. refactored code to display the number of each gender with the names 'Irena', 'Vidya', and 'Maya
-SELECT COUNT(gender),gender
+SELECT COUNT(*),gender
 FROM employees
 WHERE first_name IN ('Irena', 'Vidya', 'Maya')
 GROUP BY gender;
+
+
 
