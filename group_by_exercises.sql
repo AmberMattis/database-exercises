@@ -12,3 +12,10 @@ FROM employees
 WHERE last_name LIKE '%E'
   AND last_name LIKE 'E%'
 GROUP BY last_name;
+
+# 4 refactored above code to find unique combinations of first and last names
+SELECT last_name, first_name
+FROM employees
+WHERE last_name LIKE '%E'
+  AND last_name LIKE 'E%'
+GROUP BY last_name, first_name;
