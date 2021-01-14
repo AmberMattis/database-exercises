@@ -27,3 +27,9 @@ WHERE last_name LIKE '%q%'
           AND last_name NOT LIKE '%qu%'
 GROUP BY last_name;
 
+# 7. refactored code to display the number of each gender with the names 'Irena', 'Vidya', and 'Maya
+SELECT COUNT(gender),gender
+FROM employees
+WHERE first_name IN ('Irena', 'Vidya', 'Maya')
+GROUP BY gender;
+
