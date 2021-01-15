@@ -35,5 +35,21 @@ INSERT INTO users (name, email, role_id) VALUES
 SELECT * FROM users;
 
 
+SELECT users.name as full_name, roles.name as role_name
+FROM roles
+JOIN users ON roles.id = users.role_id;
+
+SELECT users.name as full_name, roles.name as role_name
+FROM users
+LEFT JOIN roles ON users.id = users.role_id;
+
+SELECT users.name as full_name, roles.name as role_name
+FROM roles
+RIGHT JOIN users ON users.id = users.role_id;
+
+# count the number of people in each profession
+SELECT COUNT(users.role_id), roles.name
+FROM roles
+JOIN users ON roles.id = users.role_id;
 
 
