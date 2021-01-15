@@ -19,4 +19,9 @@ FROM albums
 WHERE name LIKE '%Nevermind%';
 
 
+# Will return the name of all the albums released in the 90s
+SELECT name, release_date
+FROM albums
+WHERE release_date BETWEEN '1990' AND '1999';
+
 
