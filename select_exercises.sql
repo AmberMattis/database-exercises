@@ -30,4 +30,7 @@ SELECT *
 FROM albums
 WHERE sales < 20;
 
-
+# Will return all albums in the Rock genre
+SELECT *
+FROM albums
+WHERE genre LIKE 'ROCK';
