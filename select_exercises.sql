@@ -7,4 +7,11 @@ SELECT ALL name
 FROM albums
 WHERE artist LIKE '%Pink Floyd%';
 
+# Will return the year the Beatle's Sgt Pepper Lonely Hearts Club was released
+SELECT release_date
+FROM albums
+WHERE name LIKE '%Lonely Hearts CLub%';
+
+
+
 
