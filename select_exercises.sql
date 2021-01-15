@@ -13,5 +13,10 @@ FROM albums
 WHERE name LIKE '%Lonely Hearts CLub%';
 
 
+# Will return the genre of the album named Nevermind
+SELECT genre
+FROM albums
+WHERE name LIKE '%Nevermind%';
+
 
 
