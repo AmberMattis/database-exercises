@@ -35,6 +35,9 @@ WHERE genre LIKE 'disco';
 
 
 
-# Will display all albums by Whitney Houston
-SELECT * FROM albums
+# Will delete all albums by Whitney Houston
+DELETE FROM albums
 WHERE artist LIKE '%Whitney Houston%';
+
+SELECT * FROM albums
+WHERE artist  LIKE '%Whitney Houston%';
