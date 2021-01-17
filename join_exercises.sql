@@ -22,3 +22,17 @@ FROM employees as e
 WHERE dm.to_date = '9999-01-01' AND gender LIKE ('F')
 ORDER BY dept_name;
 
+
+
+# 4. Will display employees currently working in the customer service department
+SELECT t.title AS Title, COUNT(*) AS Count
+FROM departments AS d
+    JOIN dept_emp  AS de
+         ON de.dept_no = d.dept_no
+    JOIN titles AS t
+        ON t.emp_no = de.emp_no
+WHERE d.dept_name = 'Customer Service'
+AND t.to_date > NOW()
+GROUP BY t.title;
+
+
