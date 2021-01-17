@@ -35,4 +35,18 @@ WHERE d.dept_name = 'Customer Service'
 AND t.to_date > NOW()
 GROUP BY t.title;
 
+# 5. Will display salaries of all current managers
+SELECT d.dept_name, CONCAT(e.first_name, ' ', e.last_name) AS 'Manager', s.salary
+FROM salaries AS s
+     JOIN dept_manager AS m
+          ON m.emp_no = s.emp_no
+     JOIN employees AS e
+          ON e.emp_no = m.emp_no
+     JOIN departments AS d
+          ON d.dept_no = m.dept_no
+WHERE m.to_date > NOW()
+  AND s.to_date > NOW()
+ORDER BY d.dept_name;
+
+
 
